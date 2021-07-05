@@ -7,10 +7,6 @@
         mappingImage = "map.bmp"
         hoverImage = "hover.bmp">
           <BUTTONELEMENT
-            mappingColor = "#00FF00"
-            onClick="JScript:player.controls.play();"
-            upToolTip="Play"/>
-          <BUTTONELEMENT
             mappingColor = "#FF7F00"
             onClick="JScript:player.controls.previous();"
             upToolTip="Previous"/>
@@ -33,12 +29,12 @@
       </BUTTONGROUP>
       <VIDEO
         top="20"
-        left="96"
+        left="160"
         width="304"
         height="228"/>
       <EFFECTS
         top="20"
-        left="96"
+        left="160"
         width="304"
         height="228"/>
       <TEXT
@@ -46,7 +42,7 @@
         fontsize="8"
         foregroundColor="white"
         top="248"
-        left="96"
+        left="172"
         width="304"
         height="12"/>
       <PLAYLIST
@@ -54,7 +50,7 @@
         columnsVisible="false"
         top="20"
         left="0"
-        width="96"
+        width="160"
         height="280"
         />
       <SLIDER
@@ -64,12 +60,12 @@
         onmouseup = "player.controls.currentPosition = seekbar.value; "
         tooltip = "Current Position"
         height = "10"
-        width = "129"
+        width = "160"
         top = "275"
-        left = "144"
+        left = "172"
         backgroundColor = "gray"
         foregroundColor = "gray"
-        thumbImage = "thumb.bmp"/>
+        thumbImage = "seek.bmp"/>
       <PLAYER>
         <CONTROLS
             currentPosition_onchange = "seekbar.value = player.controls.currentPosition; mediainfo.value = player.currentMedia.name + ' (' + player.controls.currentPositionString + '/' + player.currentMedia.DurationString + ')'"/>
