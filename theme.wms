@@ -1,0 +1,77 @@
+<THEME>
+  <VIEW
+    clippingColor = "#101010"
+    backgroundImage = "bg.bmp"
+    titleBar = "False">
+      <BUTTONGROUP
+        mappingImage = "map.bmp"
+        hoverImage = "hover.bmp">
+          <BUTTONELEMENT
+            mappingColor = "#00FF00"
+            onClick="JScript:player.controls.play();"
+            upToolTip="Play"/>
+          <BUTTONELEMENT
+            mappingColor = "#FF7F00"
+            onClick="JScript:player.controls.previous();"
+            upToolTip="Previous"/>
+          <BUTTONELEMENT
+            mappingColor = "#007F00"
+            onClick="JScript:player.controls.stop();"
+            upToolTip="Stop"/>
+          <BUTTONELEMENT
+            mappingColor = "#007FFF"
+            onClick="JScript:player.controls.next();"
+            upToolTip="Next"/>
+          <BUTTONELEMENT
+            mappingColor = "#FF0000"
+            upToolTip = "Close"
+            onClick = "JScript:view.close();"/>
+          <BUTTONELEMENT
+            mappingColor = "#0000FF"
+            upToolTip = "Minimize"
+            onClick = "JScript:view.minimize();"/>
+      </BUTTONGROUP>
+      <VIDEO
+        top="20"
+        left="96"
+        width="304"
+        height="228"/>
+      <EFFECTS
+        top="20"
+        left="96"
+        width="304"
+        height="228"/>
+      <TRACKNAMETEXT
+        fontsize="8"
+        foregroundColor="white"
+        top="248"
+        left="96"
+        width="304"
+        height="12"/>
+      <PLAYLIST
+        columns="name=Name"
+        columnsVisible="false"
+        top="20"
+        left="0"
+        width="96"
+        height="280"
+        />
+      <SLIDER
+        id = "seekbar"
+        min = "0"
+        max = "wmpprop:player.currentMedia.duration"
+        onmouseup = "player.controls.currentPosition = seekbar.value; "
+        tooltip = "Current Position"
+        height = "10"
+        width = "129"
+        top = "275"
+        left = "144"
+        backgroundColor = "gray"
+        foregroundColor = "gray"
+        thumbImage = "thumb.bmp"/>
+      <PLAYER>
+        <CONTROLS
+            currentPosition_onchange = "seekbar.value = player.controls.currentPosition; "/>
+      </PLAYER>
+  </VIEW>
+</THEME>
