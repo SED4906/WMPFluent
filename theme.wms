@@ -41,7 +41,8 @@
         left="96"
         width="304"
         height="228"/>
-      <TRACKNAMETEXT
+      <TEXT
+        id="mediainfo"
         fontsize="8"
         foregroundColor="white"
         top="248"
@@ -71,7 +72,7 @@
         thumbImage = "thumb.bmp"/>
       <PLAYER>
         <CONTROLS
-            currentPosition_onchange = "seekbar.value = player.controls.currentPosition; "/>
+            currentPosition_onchange = "seekbar.value = player.controls.currentPosition; mediainfo.value = player.currentMedia.name + ' (' + player.controls.currentPositionString + '/' + player.currentMedia.DurationString + ')'"/>
       </PLAYER>
   </VIEW>
 </THEME>
