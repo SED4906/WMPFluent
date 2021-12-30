@@ -26,13 +26,17 @@
             mappingColor = "#0000FF"
             upToolTip = "Minimize"
             onClick = "JScript:view.minimize();"/>
+          <BUTTONELEMENT
+            mappingColor="#FF00FF"
+            onClick="JScript:automenu.show('Play');"
+            upToolTip="Menu"/>
       </BUTTONGROUP>
-      <VIDEO
+      <EFFECTS
         top="20"
         left="160"
         width="304"
         height="228"/>
-      <EFFECTS
+      <VIDEO
         top="20"
         left="160"
         width="304"
@@ -53,6 +57,10 @@
         width="160"
         height="280"
         />
+      <AUTOMENU
+        id="automenu"
+        left="9"
+        top="9"/>
       <SLIDER
         id = "seekbar"
         min = "0"
